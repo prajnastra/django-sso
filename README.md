@@ -2,7 +2,6 @@
 
 ## Set-Up the Repository
 ```
-$ cd Single-Sign-On/
 $ python3 -m venv venv
 $ source venv/bin/activate
 (venv)$ pip install -r requirements.txt
@@ -20,30 +19,24 @@ USE_FILE_BASED_DB=1
 ```
 **OR**
 ```
+DATABASE_URL="..."
 DATABASE_NAME="..."
-DATABASE_USERNAME="..."
-DATABASE_PASSWORD="..."
-DATABASE_HOST="..."
-DATABASE_PORT="..."
 ```
 
 ### Apply Migrations
 ```
 $ source venv/bin/activate
-(venv)$ cd src/
 (venv)$ python manage.py migrate
 ```
 
 ### Create the Admin
 ```
-(venv)$ cd src/
 (venv)$ python manage.py viga_setup
 ```
 
 ## Running-Up Server
 ```
 $ source venv/bin/activate
-(venv)$ cd src/
 (venv)$ python manage.py runserver
 ```
 
